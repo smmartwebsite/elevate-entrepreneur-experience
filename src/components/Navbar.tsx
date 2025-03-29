@@ -68,32 +68,13 @@ const Navbar = () => {
               </DropdownMenuContent>
             </DropdownMenu>
 
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button variant="ghost" className="flex items-center">
-                  About <ChevronDown className="ml-1 h-4 w-4" />
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent>
-                <DropdownMenuItem>Our Story</DropdownMenuItem>
-                <DropdownMenuItem>Team</DropdownMenuItem>
-                <DropdownMenuItem>Methodology</DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
+            <Button variant="ghost" asChild>
+              <Link to="/about">About</Link>
+            </Button>
 
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button variant="ghost" className="flex items-center">
-                  Resources <ChevronDown className="ml-1 h-4 w-4" />
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent>
-                <DropdownMenuItem>Blog</DropdownMenuItem>
-                <DropdownMenuItem>Case Studies</DropdownMenuItem>
-                <DropdownMenuItem>Free Tools</DropdownMenuItem>
-                <DropdownMenuItem>Podcast</DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
+            <Button variant="ghost" asChild>
+              <Link to="/resources">Resources</Link>
+            </Button>
 
             <Button variant="ghost" asChild>
               <Link to="/events">Events</Link>
@@ -139,8 +120,12 @@ const Navbar = () => {
                 <Link to="/community-mastermind">Community Mastermind</Link>
               </Button>
             </div>
-            <Button variant="ghost" className="w-full justify-start">About</Button>
-            <Button variant="ghost" className="w-full justify-start">Resources</Button>
+            <Button variant="ghost" className="w-full justify-start" asChild>
+              <Link to="/about">About</Link>
+            </Button>
+            <Button variant="ghost" className="w-full justify-start" asChild>
+              <Link to="/resources">Resources</Link>
+            </Button>
             <Button variant="ghost" className="w-full justify-start" asChild>
               <Link to="/events">Events</Link>
             </Button>

@@ -11,6 +11,7 @@ import GrowthLeadership from "./pages/GrowthLeadership";
 import ExecutiveCoaching from "./pages/ExecutiveCoaching";
 import CommunityMastermind from "./pages/CommunityMastermind";
 import About from "./pages/About";
+import Resources from "./pages/Resources";
 import Events from "./pages/Events";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
@@ -31,6 +32,7 @@ const App = () => (
           <Route path="/executive-coaching" element={<ExecutiveCoaching />} />
           <Route path="/community-mastermind" element={<CommunityMastermind />} />
           <Route path="/about" element={<About />} />
+          <Route path="/resources" element={<Resources />} />
           <Route path="/events" element={<Events />} />
           <Route path="/contact" element={<Contact />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
