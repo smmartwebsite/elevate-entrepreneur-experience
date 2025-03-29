@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,35 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				brand: {
+					'blue': {
+						'50': '#f0f5fa',
+						'100': '#dce7f3',
+						'200': '#c0d4eb',
+						'300': '#94b6db',
+						'400': '#6291c7',
+						'500': '#4273b3',
+						'600': '#1a365d',
+						'700': '#2a4365',
+						'800': '#1e3149',
+						'900': '#1c2a3f',
+						'950': '#111927',
+					},
+					'orange': {
+						'50': '#fff6ed',
+						'100': '#ffebd5',
+						'200': '#ffd2aa',
+						'300': '#ffb273',
+						'400': '#fd8f3b',
+						'500': '#fa7011',
+						'600': '#ed8936',
+						'700': '#dd6b20',
+						'800': '#9c3e07',
+						'900': '#7e3506',
+						'950': '#431a03',
+					},
+				},
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,12 +113,47 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-in': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(10px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
+				},
+				'fade-out': {
+					'0%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					},
+					'100%': {
+						opacity: '0',
+						transform: 'translateY(10px)'
+					}
+				},
+				'counter': {
+					'0%': {
+						'counter-increment': 'count 0'
+					},
+					'100%': {
+						'counter-increment': 'count 12347'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
-			}
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.6s ease-out',
+				'fade-out': 'fade-out 0.6s ease-out',
+				'counter': 'counter 2s linear forwards'
+			},
+			fontFamily: {
+				'poppins': ['Poppins', 'sans-serif'],
+				'inter': ['Inter', 'sans-serif'],
+			},
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
