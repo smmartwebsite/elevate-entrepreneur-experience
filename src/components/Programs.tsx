@@ -3,6 +3,7 @@ import React from "react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, BarChart, Users, Lightbulb, Rocket } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const programData = [
   {
@@ -10,28 +11,32 @@ const programData = [
     description: "Zero to market in 12 weeks. Ideal for early-stage entrepreneurs looking to validate ideas and build a solid foundation.",
     icon: <Rocket className="h-10 w-10 text-brand-orange-500" />,
     features: ["Business Model Canvas", "MVP Development", "Customer Discovery", "Pitch Deck Creation"],
-    color: "bg-brand-orange-50"
+    color: "bg-brand-orange-50",
+    path: "/startup-accelerator"
   },
   {
     title: "Growth Leadership",
     description: "Scale your established business with strategic leadership development and operational excellence.",
     icon: <BarChart className="h-10 w-10 text-brand-blue-600" />,
     features: ["Revenue Growth Strategies", "Team Building", "Operational Excellence", "Strategic Planning"],
-    color: "bg-brand-blue-50"
+    color: "bg-brand-blue-50",
+    path: "/growth-leadership"
   },
   {
     title: "Executive Coaching",
     description: "One-on-one coaching to overcome challenges, seize opportunities, and achieve your business goals.",
     icon: <Lightbulb className="h-10 w-10 text-purple-600" />,
     features: ["Weekly 1:1 Sessions", "Personalized Growth Plan", "Decision-Making Framework", "Accountability System"],
-    color: "bg-purple-50"
+    color: "bg-purple-50",
+    path: "/executive-coaching"
   },
   {
     title: "Community Mastermind",
     description: "Join a curated group of entrepreneurs at your level for peer learning and collaborative problem-solving.",
     icon: <Users className="h-10 w-10 text-emerald-600" />,
     features: ["Monthly Group Sessions", "Peer Accountability", "Expert Facilitation", "Exclusive Network"],
-    color: "bg-emerald-50"
+    color: "bg-emerald-50",
+    path: "/community-mastermind"
   }
 ];
 
@@ -70,9 +75,11 @@ const Programs = () => {
                 </ul>
               </CardContent>
               <CardFooter>
-                <Button className="w-full group" variant="outline">
-                  Learn More 
-                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                <Button className="w-full group" variant="outline" asChild>
+                  <Link to={program.path}>
+                    Learn More 
+                    <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  </Link>
                 </Button>
               </CardFooter>
             </Card>

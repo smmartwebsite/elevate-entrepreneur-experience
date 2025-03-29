@@ -53,10 +53,18 @@ const Navbar = () => {
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent>
-                <DropdownMenuItem>Startup Accelerator</DropdownMenuItem>
-                <DropdownMenuItem>Growth Leadership</DropdownMenuItem>
-                <DropdownMenuItem>Scale Your Business</DropdownMenuItem>
-                <DropdownMenuItem>Executive Coaching</DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/startup-accelerator">Startup Accelerator</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/growth-leadership">Growth Leadership</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/executive-coaching">Executive Coaching</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/community-mastermind">Community Mastermind</Link>
+                </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
 
@@ -87,8 +95,14 @@ const Navbar = () => {
               </DropdownMenuContent>
             </DropdownMenu>
 
-            <Button variant="ghost">Events</Button>
-            <Button variant="ghost">Contact</Button>
+            <Button variant="ghost" asChild>
+              <Link to="/events">Events</Link>
+            </Button>
+            
+            <Button variant="ghost" asChild>
+              <Link to="/contact">Contact</Link>
+            </Button>
+            
             <Button variant="default" className="bg-orange-500 hover:bg-orange-600 ml-2">Get Started</Button>
           </nav>
 
@@ -110,11 +124,29 @@ const Navbar = () => {
       {mobileMenuOpen && (
         <div className="md:hidden bg-white border-t">
           <div className="container px-4 py-3 space-y-2">
-            <Button variant="ghost" className="w-full justify-start">Programs</Button>
+            <div className="py-2">
+              <p className="text-sm font-semibold mb-2">Programs</p>
+              <Button variant="ghost" className="w-full justify-start pl-4 text-sm" asChild>
+                <Link to="/startup-accelerator">Startup Accelerator</Link>
+              </Button>
+              <Button variant="ghost" className="w-full justify-start pl-4 text-sm" asChild>
+                <Link to="/growth-leadership">Growth Leadership</Link>
+              </Button>
+              <Button variant="ghost" className="w-full justify-start pl-4 text-sm" asChild>
+                <Link to="/executive-coaching">Executive Coaching</Link>
+              </Button>
+              <Button variant="ghost" className="w-full justify-start pl-4 text-sm" asChild>
+                <Link to="/community-mastermind">Community Mastermind</Link>
+              </Button>
+            </div>
             <Button variant="ghost" className="w-full justify-start">About</Button>
             <Button variant="ghost" className="w-full justify-start">Resources</Button>
-            <Button variant="ghost" className="w-full justify-start">Events</Button>
-            <Button variant="ghost" className="w-full justify-start">Contact</Button>
+            <Button variant="ghost" className="w-full justify-start" asChild>
+              <Link to="/events">Events</Link>
+            </Button>
+            <Button variant="ghost" className="w-full justify-start" asChild>
+              <Link to="/contact">Contact</Link>
+            </Button>
             <Button variant="default" className="w-full bg-orange-500 hover:bg-orange-600 mt-3">Get Started</Button>
           </div>
         </div>
