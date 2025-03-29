@@ -39,8 +39,8 @@ const Navbar = () => {
       <div className="container max-w-7xl mx-auto px-4">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center">
-            <span className="text-2xl font-bold text-brand-blue-700">
-              Growth<span className="text-brand-orange-500">Catalyst</span>
+            <span className="text-2xl font-bold text-sky-500">
+              SM<span className="text-orange-500">MART</span>
             </span>
           </Link>
 
@@ -89,7 +89,7 @@ const Navbar = () => {
 
             <Button variant="ghost">Events</Button>
             <Button variant="ghost">Contact</Button>
-            <Button variant="default" className="bg-brand-orange-600 hover:bg-brand-orange-700 ml-2">Get Started</Button>
+            <Button variant="default" className="bg-orange-500 hover:bg-orange-600 ml-2">Get Started</Button>
           </nav>
 
           {/* Mobile menu button */}
@@ -115,7 +115,7 @@ const Navbar = () => {
             <Button variant="ghost" className="w-full justify-start">Resources</Button>
             <Button variant="ghost" className="w-full justify-start">Events</Button>
             <Button variant="ghost" className="w-full justify-start">Contact</Button>
-            <Button variant="default" className="w-full bg-brand-orange-600 hover:bg-brand-orange-700 mt-3">Get Started</Button>
+            <Button variant="default" className="w-full bg-orange-500 hover:bg-orange-600 mt-3">Get Started</Button>
           </div>
         </div>
       )}
